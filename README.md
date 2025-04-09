@@ -32,7 +32,7 @@ git submodule add git@github.com:bamlab/flutter-ai-rules.git <app folder>/.curso
         [...]
         fetch_ai_rules:
             run: |
-            git submodule update --merge -- <app folder>/.cursor/rules/shared
+            git submodule update --remote --merge -- <app folder>/.cursor/rules/shared
             description: Fetch AI rules
 ```
 
