@@ -17,7 +17,7 @@ manually download the `flutter-shared-rules.mdc` file in a `.cursor/rules` folde
 - In the project where you want to add the rules (replace `<app folder>` by your app folder's name):
 
 ```
-git submodule add git@github.com:bamlab/flutter-ai-rules.git <app folder>/.cursor/rules/shared && git submodule update --remote --init -- <app folder>/.cursor/rules/shared && git commit -m "devx(cursor) setup auto rules fetch"
+git submodule add git@github.com:bamlab/flutter-ai-rules.git <app folder>/.cursor/rules/shared && git submodule update --remote --init -- <app folder>/.cursor/rules/shared && git commit -m "devx(cursor) cursor rules fetching on melos bs"
 ```
 
 - In the `melos.yaml` file of the project (replace `<app folder>` by your app folder's name):
@@ -38,9 +38,11 @@ git submodule add git@github.com:bamlab/flutter-ai-rules.git <app folder>/.curso
 
 > ✅ Rules are updated at each `melos bootstrap`. <br>
 > ❌ Every dev on the project must have access to this repo, or will see some error after running `melos bootstrap`. <br>
-> ❌ When committing the rules changes on the project, the commit is unreadable. <br>
+> 🟠 When committing the rules changes on the project, the commit is unreadable. Nevertheless, this change has already been reviewed on this repository<br>
 
-> ⚠️ git submodules badly support adding submodules in folders that begin by `.`.<br>
+> 💡 If you want to interact manually with the submodule, be aware that git submodules badly support adding submodules in folders that begin by `.`. If you do so, you must always specify `-- <submodule path>` in your `git submodule` commands. You can also run `cd <submodule path>` and use regular git commands, it will work well. Don't push anything on this rules repository though<br>
+
+> 💡 If you use the "source control" view of vscode, you can see a new section after adding the submodule. You can easily close it with a right click on its header.
 
 ### clean this installation
 
