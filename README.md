@@ -1,5 +1,8 @@
 # flutter-ai-rules
 
+**Disclamer:** This is an experimentation for sharing cursor rules between several flutter projects. <br>
+We are currently using this repository to iterate on the sharing system and on the rules themselves.
+
 > ⚠ **Important!** Cursor rules currently don't work well in workspace mode : Only the first folder (in alphabetical order) is detected. It should work in most case for the app folder if you name it "Application" (or anything with an "a"), but not for the other repositories of your monorepo <br>
 > Source : https://forum.cursor.com/t/cursor-rules-files-for-multi-project-workspace/48086
 
