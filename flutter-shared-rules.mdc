@@ -1,6 +1,6 @@
 ---
 description: 
-globs: 
+globs: *.dart
 alwaysApply: false
 ---
 # UI
