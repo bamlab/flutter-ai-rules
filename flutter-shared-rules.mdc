@@ -16,3 +16,7 @@ alwaysApply: false
 - put the most descriptive noun last
 - use wildcards for unused callback parameters
 - sort imports alphabetically
+
+## Riverpod
+- Always use riverpod annotation when writing providers.
+- When adding the ref parameter, use Ref type from the riverpod package (please add the riverpod package import statement), instead of using the ref dedicated to the provider (e.g. `<ProviderName>Ref`) which is deprecated and will be removed in version 3.0 of riverpod.
