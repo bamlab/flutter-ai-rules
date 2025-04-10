@@ -17,7 +17,7 @@ manually download the `flutter-shared-rules.mdc` file in a `.cursor/rules` folde
 - In the project where you want to add the rules (replace `<app folder>` by your app folder's name):
 
 ```
-git submodule add git@github.com:bamlab/flutter-ai-rules.git <app folder>/.cursor/rules/shared && git submodule update --remote --init -- <app folder>/.cursor/rules/shared && git commit -m "devx(cursor) cursor rules fetching on melos bs"
+git submodule add git@github.com:bamlab/flutter-ai-rules.git <app folder>/.cursor/rules/shared && git submodule update --remote --init -- <app folder>/.cursor/rules/shared && git commit -m "devx(cursor) create cursor rules submodule"
 ```
 
 - In the `melos.yaml` file of the project (replace `<app folder>` by your app folder's name):
@@ -26,7 +26,7 @@ git submodule add git@github.com:bamlab/flutter-ai-rules.git <app folder>/.curso
     bootstrap:
         [...]
         hooks:
-        post: melos fetch_ai_rules
+            post: melos fetch_ai_rules
     [...]
     scripts:
         [...]
