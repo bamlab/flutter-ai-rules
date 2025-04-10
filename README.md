@@ -9,10 +9,41 @@ You have 2 options for fetching the rules in your project:
 
 manually download the `flutter-shared-rules.mdc` file in a `.cursor/rules` folder
 
-> ✅ Simple setup & project management <br>
-> ❌ Need to do it again each time the file is updated, for all your projects
+> ✅ Simple setup & project management. <br>
+> ❌ Need to do it again each time the file is updated, for all your projects.
 
 ## Automated fetch
+
+- In the `melos.yaml` file of the project (replace `<app folder>` by your app folder's name):
+
+```
+    bootstrap:
+        [...]
+        hooks:
+            post: melos fetch_ai_rules
+    [...]
+    scripts:
+        [...]
+        fetch_ai_rules:
+            run: |
+            curl -L -s https://raw.githubusercontent.com/bamlab/flutter-ai-rules/refs/heads/main/flutter-shared-rules.mdc -o <app folder>/.cursor/rules/shared/flutter-shared-rules.mdc
+            description: Fetch AI rules
+```
+
+> ✅ Simple setup & project management. <br>
+> ✅ Rules are updated at each `melos bootstrap`. <br>
+
+<br>
+<br>
+
+---
+
+deprecated
+
+<details>
+<summary>
+ Automated fetch - if this repository is private
+</summary>
 
 - In the project where you want to add the rules (replace `<app folder>` by your app folder's name):
 
@@ -51,3 +82,4 @@ at the root of your project:
 - remove the submodule from `.gitmodules`
 - remove the submodule from `.git/modules`
   - by default, `.git` is not visible in vscode: open finder and show hidden files (`cmd`+`shift`+`.`)
+  </details>
