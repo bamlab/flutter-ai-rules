@@ -18,5 +18,23 @@ alwaysApply: false
 - sort imports alphabetically
 
 ## Riverpod
-- Always use riverpod annotation when writing providers.
-- When adding the ref parameter, use Ref type from the riverpod package (please add the riverpod package import statement), instead of using the ref dedicated to the provider (e.g. `<ProviderName>Ref`) which is deprecated and will be removed in version 3.0 of riverpod.
+- Always use the `@riverpod` annotation when writing providers.
+- The ref parameter of provider is of type "Ref".
+<examples>
+  <good>
+  
+    import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+    @riverpod
+    Future<int> myProvider(Ref ref){...}
+
+  </good>
+  <bad>
+  
+    import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+    @riverpod
+    Future<int> myProvider(MyProviderRef ref){...}
+
+  </bad>
+</examples>
