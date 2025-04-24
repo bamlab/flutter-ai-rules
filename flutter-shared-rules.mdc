@@ -16,3 +16,25 @@ alwaysApply: false
 - put the most descriptive noun last
 - use wildcards for unused callback parameters
 - sort imports alphabetically
+
+## Riverpod
+- Always use the `@riverpod` annotation when writing providers.
+- The ref parameter of provider is of type "Ref".
+<examples>
+  <good>
+  
+    import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+    @riverpod
+    Future<int> myProvider(Ref ref){...}
+
+  </good>
+  <bad>
+  
+    import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+    @riverpod
+    Future<int> myProvider(MyProviderRef ref){...}
+
+  </bad>
+</examples>
