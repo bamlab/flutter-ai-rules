@@ -29,6 +29,7 @@ manually download the `flutter-shared-rules.mdc` file in a `.cursor/rules` folde
         [...]
         fetch_ai_rules:
             run: |
+            mkdir -p <app folder>/.cursor/rules/shared && \
             curl -L -s https://raw.githubusercontent.com/bamlab/flutter-ai-rules/refs/heads/main/flutter-shared-rules.mdc -o <app folder>/.cursor/rules/shared/flutter-shared-rules.mdc
             description: Fetch AI rules
 ```
